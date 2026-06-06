@@ -17,7 +17,7 @@ diff: ; uv run statute-tracker diff
 plots: ; uv run statute-tracker plots
 
 pdf:
-	cd docs/_report && pandoc research_report.md -o ../research_report.pdf --pdf-engine=xelatex || echo "pandoc + xelatex required"
+	cd docs/_report && pandoc research_report.md -o ../research_report.pdf --pdf-engine=xelatex --toc --toc-depth=2 --number-sections -V geometry:margin=1in -V fontsize=11pt -V mainfont="Helvetica" -V monofont="Menlo" -V linkcolor=blue -V urlcolor=blue -V linestretch=1.15 || echo "pandoc + xelatex required; see https://pandoc.org/installing.html"
 
 test-artifacts:
 	@mkdir -p docs/test_results

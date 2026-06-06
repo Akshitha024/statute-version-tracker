@@ -1,0 +1,29 @@
+{
+  "n_transitions": 2,
+  "kinds_per_transition": {
+    "2022-01-01->2023-01-01": {
+      "unchanged": 24,
+      "cosmetic": 3,
+      "renumbering": 0,
+      "substantive": 2,
+      "added": 1,
+      "deleted": 1
+    },
+    "2023-01-01->2024-01-01": {
+      "unchanged": 20,
+      "cosmetic": 3,
+      "renumbering": 0,
+      "substantive": 4,
+      "added": 2,
+      "deleted": 3
+    }
+  },
+  "totals": {
+    "unchanged": 44,
+    "cosmetic": 6,
+    "renumbering": 0,
+    "substantive": 6,
+    "added": 3,
+    "deleted": 4
+  }
+}
