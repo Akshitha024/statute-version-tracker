@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: statute-version-tracker — semantic diff for versioned statutes
+authors:
+  - family-names: Lingampally
+    given-names: Akshitha Reddy
+type: software
+date-released: 2025-03-04
+repository-code: https://github.com/Akshitha024/statute-version-tracker
+license: MIT
+references:
+  - type: article
+    title: "BLEU: a Method for Automatic Evaluation of Machine Translation"
+    authors: [{family-names: Papineni, given-names: Kishore}]
+    year: 2002
+  - type: article
+    title: "BERTScore: Evaluating Text Generation with BERT"
+    authors: [{family-names: Zhang, given-names: Tianyi}]
+    year: 2020
+    url: https://arxiv.org/abs/1904.09675

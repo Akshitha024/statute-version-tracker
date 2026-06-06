@@ -1,0 +1,60 @@
+[project]
+name = "statute-tracker"
+version = "0.15.0"
+description = "Semantic diff detection across versioned statute snapshots: lexical + semantic + change-type classification."
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+license = { text = "MIT" }
+authors = [{ name = "Akshitha Reddy Lingampally" }]
+keywords = ["legal-nlp", "statute-tracking", "semantic-diff", "version-tracking"]
+
+dependencies = [
+    "sentence-transformers>=3.0,<4",
+    "numpy>=1.26,<2",
+    "pandas>=2.2",
+    "scikit-learn>=1.4",
+    "matplotlib>=3.8",
+    "rapidfuzz>=3",
+    "tqdm>=4.66",
+    "typer>=0.12",
+    "pydantic>=2.7",
+    "loguru>=0.7",
+    "tabulate>=0.9",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8","pytest-cov>=5","ruff>=0.5","mypy>=1.10","types-tqdm"]
+
+[project.scripts]
+statute-tracker = "statute_tracker.cli.main:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/statute_tracker"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E","W","F","I","B","UP","SIM","RUF"]
+ignore = ["E501","B008"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["B011"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+warn_unreachable = true
+ignore_missing_imports = true
+exclude = ["build/","dist/"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q --strict-markers"
+markers = ["slow: tests that download large corpora"]
