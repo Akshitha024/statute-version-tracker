@@ -1,0 +1,21 @@
+# Edit History palette for this repo. Re-rendered charts pick this up.
+axes.facecolor: #FFFFFC
+figure.facecolor: #FFFFFC
+axes.edgecolor: #1c1c1c
+axes.labelcolor: #1c1c1c
+axes.titlecolor: #1c1c1c
+axes.titleweight: bold
+xtick.color: #1c1c1c
+ytick.color: #1c1c1c
+grid.color: #FFE9B0
+grid.alpha: 0.5
+axes.grid: True
+axes.spines.top: False
+axes.spines.right: False
+axes.prop_cycle: cycler('color', [#0F4C5C, #5F0F40, #9A031E, #E36414, #FB8B24, #FFFFFC])
+font.family: sans-serif
+font.sans-serif: Helvetica, Arial, DejaVu Sans
+font.size: 10
+figure.titlesize: 14
+figure.titleweight: bold
+image.cmap: OrRd
